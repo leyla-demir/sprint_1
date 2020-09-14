@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: block;
+}
+
+.header{
+    display: flex;
+    flex-flow: wrap;
+    position: absolute;
+    justify-content: space-between;
+    margin bottom: 50px;
+    top: 15%;
+    left: 20%;
+    right: 15%;
+    
+}
+
+.header-left{
+    display: block;
+    /* font-size: 25px; */
+}
+.header-right{
+    display: block;
+    width: 500px;
+    /* font-size: 15px; */
+
+}
+
+.person-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    right: 20%;
+}
+
+.person-1, .person-2, .person-3, .person-4, .person-5, .person-6{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.25fr 0.75fr 0.25fr 0.25fr 0.75 0.25;
+    grid-template-areas: 
+        "person1 . person3"
+        "person1 person2 person3"
+        ". person2 ."
+        "person4 . person6"
+        "person4 person5 person6"
+        ". person5 .";
+    margin-bottom: 50px;
+}
+
+.photo{
+    grid-area: "photo"
+    width: 280px;
+    height: 350px;
+    border-radius: 7px;
+}
+
+.name{
+    grid-area: "name";
+    font-size: 15px;
+    margin: 25px 0px;
+}
+
+.duty{
+    grid-area: "duty";
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 15px;
+}
+
+.person-1{
+    grid-area: person1;
+}
+
+.person-2{
+    grid-area: person2;
+}
+
+.person-3{
+    grid-area: person3;
+}
+
+.person-4{
+    grid-area: person4;
+}
+
+.person-5{
+    grid-area: person5;
+}
+
+.person-6{
+    grid-area: person6;
+}
+/* .person-2, .person-5{
+    margin-top: 50px;
+} */

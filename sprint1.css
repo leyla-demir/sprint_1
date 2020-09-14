@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    padding: 180px 180px;
+}
+.container{
+    display: block;
+}
+
+
+.header{
+    display: flex;
+    flex-flow: wrap;
+    position: absolute;
+    justify-content: space-between;
+    margin bottom: 50px;
+    top: 15%;
+    left: 20%;
+    right: 15%;
+    
+}
+
+.header-left{
+    display: block;
+    /* font-size: 25px; */
+}
+.header-right{
+    display: block;
+    width: 500px;
+    /* font-size: 15px; */
+
+}
+
+.item{
+    /* background-color: plum; */
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+}
+
+img{
+    width: 300px;
+    height: 400px;
+    border-radius: 15px;
+}
+.person-container {
+    width: 900px;
+    height: 900px;
+    margin-top: 50px;
+    font-family: sans-serif;
+    display: grid;
+    background-color: white;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 0.25fr 0.75fr 0.25fr 0.25fr 0.75 0.25;
+    grid-gap: 10px 45px;
+
+    grid-template-areas:
+       "A . C"
+       "A B C"
+       ". B ."
+       "D . F"
+       "D E F"
+       ". E F"
+       
+      
+}
+
+#item1 {
+    grid-area: A;
+  }
+#item2 {
+    grid-area: B;
+}
+#item3 {
+    grid-area: C;
+}
+#item4 {
+    grid-area: D;
+}
+#item5 {
+    grid-area: E;
+}
+#item6 {
+    grid-area: F;
+}
+
+.span{
+    position: absolute;
+    right: 100%;
+    writing-mode: vertical-rl;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+@media (max-width: 850px) {
+    .header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .person-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.25fr 0.75fr 0.25fr 0.25fr 0.75fr 0.25fr;
+        grid-gap: 15px 25px;
+        grid-template-areas: 
+        "A . "
+        "A B"
+        ". B"
+        "C . "
+        "C D"
+        ". D"
+        "E . "
+        "E F"
+        ". F";
+    }
+    .span{
+        position: absolute;
+        right: 100%;
+        writing-mode: vertical-rl;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: smaller;
+    }
+}
+#item1 {
+    grid-area: A;
+  }
+#item2 {
+    grid-area: B;
+}
+#item3 {
+    grid-area: C;
+}
+#item4 {
+    grid-area: D;
+}
+#item5 {
+    grid-area: E;
+}
+#item6 {
+    grid-area: F;
+}
+
+@media (max-width: 650px){
+    .person-container{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
